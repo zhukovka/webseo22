@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <div id="output">
+        
+    </div>
+    <script>
+        var DZIDZIOКонтрабас = {
+            Рейтинг: 8.9,
+            Голосов: 353,
+            year: 2017,
+            Режиссеры: "Олег Борщевский",
+            Актеры: "Михаил Хома, Назарий Гук",
+            0:""
+        };
+        //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String
+        //-узнать есть ли символ с строке
+        var indexOfA = "DZIDZIO".indexOf("a"); //-1
+        if(String.prototype.includes){
+            var hasA = "DZIDZIO".includes("a");
+        }
+        
+        //узнать charcode код
+        "DZIDZIO".charCodeAt(0)
+        
+        //количество симоволов
+        "DZIDZIO".length
+        
+        //создать новую
+        var str = "DZIDZIO".replace("D", "a");
+        
+        var arr = ["Kirill","Alex","Alex","Dima"];
+        console.log(arr);
+        
+        //цикл для массива
+        for(var i = 0; i < arr.length; i++){
+            var el = arr[i];
+            output.innerHTML += "Привет " + el + "<br>";
+        }
+        //спросить имя
+        // var username = prompt("What is your name?");
+        
+        /**
+        * falsy values (https://developer.mozilla.org/ru/docs/Glossary/Falsy)
+        * 0
+        * ""
+        * undefined
+        * NaN
+        * null
+        * */
+        
+        //инициализировать массив
+        var arr = [];
+        
+        //добавить в массив имена
+        arr[0] = "lena";
+        arr[1] = "olga";
+        
+        /**
+         * Задание 
+         * - спрашивать у пользователя имя, 
+         * пока он не нажмет cancel или оставит поле ввода пустым
+         * - собирать полученные имена в массв
+         **/
+         //1. counter
+         var i = 0;
+         //2. инициализировать массив
+         var usernames = [];
+         //3. condition
+         var ask = true;
+         
+         while(ask){
+            var username = prompt("Next name");
+            if (username) {
+                usernames[i] = username;
+                i++;
+            } else {
+                ask = false;
+            }
+         }
+         console.log(usernames);
+         
+    </script>
+</body>
+</html>
